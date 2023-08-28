@@ -22,11 +22,10 @@ Route::get('/user', function () {
 });
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
+Route::get('/admin/artikel', function() {
+    return view('admin.tambah-artikel');
+})->name('add-artikel');
 
 Auth::routes();
 

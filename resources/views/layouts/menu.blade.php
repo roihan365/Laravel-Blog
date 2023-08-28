@@ -5,3 +5,9 @@
         <p>Home</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{ route('add-artikel') }}" class="nav-link {{ Request::is('admin/artikel') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-home"></i>
+        <p>Tambah Artikel</p>
+    </a>
+</li>
