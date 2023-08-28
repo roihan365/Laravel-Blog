@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ------------------------------- Bilal ---------------------------------
+Route::get('/user', function () {
+    return view('/layouts/user');
+});
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+
+
