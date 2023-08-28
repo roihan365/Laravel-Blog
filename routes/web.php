@@ -17,12 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts/user');
 });
+Route::get('/user', function () {
+    return view('/layouts/user');
+});
+
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/user', function(){
-    return view('admin.login');
-})->name('login');
+Route::get('/admin/artikel', function() {
+    return view('admin.tambah-artikel');
+})->name('add-artikel');
 
 Auth::routes();
 

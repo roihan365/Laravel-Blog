@@ -277,7 +277,3 @@
       });
     </script>
 @endsection
-
-@section('content')
-    
-@endsection
