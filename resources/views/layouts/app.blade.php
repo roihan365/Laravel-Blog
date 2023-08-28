@@ -1,5 +1,4 @@
 <x-laravel-ui-adminlte::adminlte-layout>
-
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
             <!-- Main Header -->

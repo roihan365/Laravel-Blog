@@ -14,7 +14,9 @@
                 <a href="">subscribe</a>
             </div>
         </div>
-        <button class="bg-red-500 text-white px-9 py-2 rounded-md font-bold">Masuk</button>
+        <a href="{{ route('login') }}">
+            <button class="bg-red-500 text-white px-9 py-2 rounded-md font-bold">Masuk</button>
+        </a>
     </nav>
     <header class="bg-[#F5F5F5] flex flex-col justify-center items-center py-24 rounded-3xl my-8">
         <p class="text-gray-400 font-bold">WELCOME TO ROBIL-NEWS</p>
