@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,9 +24,7 @@ Route::get('/user', function () {
 
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/admin/artikel', function() {
-    return view('admin.tambah-artikel');
-})->name('add-artikel');
+Route::resource('admin/artikel', ArticleController::class);
 
 Auth::routes();
 

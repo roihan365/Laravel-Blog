@@ -12,8 +12,22 @@
         margin: 20px auto;
     }
   </style>
-  <div class="container-fluid">
-      <div id="editor"></div>
+  <div class="container-fluid bg-white px-4">
+    <form method="POST" action="artikel.store">
+        @csrf
+        <div class="mb-3">
+            <label class="form-label mt-4">Judul Artikel</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="mb-5">
+            <label for="formFile" class="form-label">Upload Gambar</label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+        <div id="editor"></div>
+        <div>
+          <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        </div>
+    </form>
   </div>
   <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/super-build/ckeditor.js"></script>
       
@@ -24,7 +38,6 @@
         // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
         toolbar: {
             items: [
-                'exportPDF','exportWord', '|',
                 'findAndReplace', 'selectAll', '|',
                 'heading', '|',
                 'bold', 'italic', 'strikethrough', 'underline', 'code', 'subscript', 'superscript', 'removeFormat', '|',
@@ -63,7 +76,7 @@
             ]
         },
         // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
-        placeholder: 'Welcome to CKEditor&nbsp;5!',
+        placeholder: 'Masukkan isi artikel disini...',
         // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
         fontFamily: {
             options: [

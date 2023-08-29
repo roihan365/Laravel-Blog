@@ -6,7 +6,7 @@
     </a>
 </li>
 <li class="nav-item">
-    <a href="{{ route('add-artikel') }}" class="nav-link {{ Request::is('admin/artikel') ? 'active' : '' }}">
+    <a href="{{ route('artikel.create') }}" class="nav-link {{ Request::is('admin/artikel/create') ? 'active' : '' }}">
         <i class="nav-icon fas fa-home"></i>
         <p>Tambah Artikel</p>
     </a>
