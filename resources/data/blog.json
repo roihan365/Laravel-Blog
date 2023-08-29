@@ -1,0 +1,281 @@
+[
+    {
+        "img": "link_gambar1.jpg",
+        "name": "John Doe",
+        "date": "17 Agustus 2023",
+        "title": "Cara Memasak Makanan Lezat dalam 30 Menit",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at risus nec metus aliquam dapibus. Nullam quis pellentesque velit.",
+        "category": "Masakan",
+        "waktu_dibaca": "12 Menit"
+    },
+    {
+        "img": "link_gambar2.jpg",
+        "name": "Jane Smith",
+        "date": "20 Agustus 2023",
+        "title": "Tips Merawat Tanaman Hias agar Tetap Cantik",
+        "desc": "Vestibulum feugiat tellus eu neque feugiat, ac dictum libero varius. Vivamus id fringilla dui.",
+        "category": "Tanaman Hias",
+        "waktu_dibaca": "8 Menit"
+    },
+    {
+        "img": "link_gambar3.jpg",
+        "name": "Michael Johnson",
+        "date": "25 Agustus 2023",
+        "title": "Panduan Pemula: Belajar Bermain Gitar dengan Mudah",
+        "desc": "Etiam sit amet justo ut elit bibendum egestas vel a libero. Suspendisse consectetur nisl non nibh lacinia, eu hendrerit velit venenatis.",
+        "category": "Musik",
+        "waktu_dibaca": "15 Menit"
+    },
+    {
+        "img": "link_gambar4.jpg",
+        "name": "Emily Brown",
+        "date": "30 Agustus 2023",
+        "title": "Mengenal Jenis-jenis Kucing Peliharaan yang Populer",
+        "desc": "Proin tincidunt odio ac libero facilisis, at aliquam mauris commodo. Sed at diam id erat hendrerit dictum.",
+        "category": "Hewan Peliharaan",
+        "waktu_dibaca": "10 Menit"
+    },
+    {
+        "img": "link_gambar5.jpg",
+        "name": "Daniel Lee",
+        "date": "5 September 2023",
+        "title": "Rahasia Sukses dalam Belajar Bahasa Asing",
+        "desc": "Aenean et mauris sagittis, malesuada dolor nec, dictum ligula. Nunc id lorem nec nisi viverra mattis vel nec velit.",
+        "category": "Pendidikan",
+        "waktu_dibaca": "20 Menit"
+    },
+    {
+        "img": "link_gambar6.jpg",
+        "name": "Olivia Wilson",
+        "date": "10 September 2023",
+        "title": "Destinasi Wisata Tersembunyi di Pulau Bali",
+        "desc": "Cras aliquam nulla eget diam commodo venenatis. Nulla facilisi. Vivamus non interdum odio, non finibus odio.",
+        "category": "Travel",
+        "waktu_dibaca": "18 Menit"
+    },
+    {
+        "img": "link_gambar7.jpg",
+        "name": "William Martinez",
+        "date": "15 September 2023",
+        "title": "Teknologi Terbaru dalam Industri Otomotif",
+        "desc": "Nulla vitae arcu a tellus tristique congue in ut sem. Nulla facilisi. Sed vitae mauris non ligula ullamcorper tristique.",
+        "category": "Teknologi",
+        "waktu_dibaca": "14 Menit"
+    },
+    {
+        "img": "link_gambar8.jpg",
+        "name": "Sophia Davis",
+        "date": "20 September 2023",
+        "title": "Mengenal Seni Lukis Abstrak: Gaya dan Teknik",
+        "desc": "Suspendisse potenti. Maecenas et neque sed justo varius eleifend a sit amet nisl. Sed id eros sapien.",
+        "category": "Seni",
+        "waktu_dibaca": "11 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar10.jpg",
+        "name": "Ava Adams",
+        "date": "30 September 2023",
+        "title": "Manfaat Olahraga Rutin bagi Kesehatan Mental",
+        "desc": "Aliquam tincidunt dolor eget ligula fermentum efficitur. Nam id quam a odio fringilla fermentum sit amet vel turpis.",
+        "category": "Kesehatan",
+        "waktu_dibaca": "9 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    },
+    {
+        "img": "link_gambar9.jpg",
+        "name": "James Taylor",
+        "date": "25 September 2023",
+        "title": "Berpindah Kerja: Tips Sukses untuk Transisi Karier",
+        "desc": "Curabitur sit amet convallis orci. Pellentesque quis lectus et arcu hendrerit interdum. Donec vitae pharetra elit.",
+        "category": "Karier",
+        "waktu_dibaca": "16 Menit"
+    }
+]
