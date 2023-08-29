@@ -15,12 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts/user');
+    return view('users/home');
 });
-Route::get('/user', function () {
-    return view('/layouts/user');
+Route::get('/users/detailblog', function () {
+    return view('users.detailblog');
 });
-
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/artikel', function() {

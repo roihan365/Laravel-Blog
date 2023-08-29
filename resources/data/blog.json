@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "img": "link_gambar1.jpg",
         "name": "John Doe",
         "date": "17 Agustus 2023",
@@ -9,6 +10,7 @@
         "waktu_dibaca": "12 Menit"
     },
     {
+        "id": "2",
         "img": "link_gambar2.jpg",
         "name": "Jane Smith",
         "date": "20 Agustus 2023",
@@ -18,6 +20,7 @@
         "waktu_dibaca": "8 Menit"
     },
     {
+        "id": "3",
         "img": "link_gambar3.jpg",
         "name": "Michael Johnson",
         "date": "25 Agustus 2023",
@@ -27,6 +30,7 @@
         "waktu_dibaca": "15 Menit"
     },
     {
+        "id": "4",
         "img": "link_gambar4.jpg",
         "name": "Emily Brown",
         "date": "30 Agustus 2023",
@@ -36,6 +40,7 @@
         "waktu_dibaca": "10 Menit"
     },
     {
+        "id": "5",
         "img": "link_gambar5.jpg",
         "name": "Daniel Lee",
         "date": "5 September 2023",
@@ -45,6 +50,7 @@
         "waktu_dibaca": "20 Menit"
     },
     {
+        "id": "6",
         "img": "link_gambar6.jpg",
         "name": "Olivia Wilson",
         "date": "10 September 2023",
@@ -54,6 +60,7 @@
         "waktu_dibaca": "18 Menit"
     },
     {
+        "id": "7",
         "img": "link_gambar7.jpg",
         "name": "William Martinez",
         "date": "15 September 2023",
@@ -63,6 +70,7 @@
         "waktu_dibaca": "14 Menit"
     },
     {
+        "id": "8",
         "img": "link_gambar8.jpg",
         "name": "Sophia Davis",
         "date": "20 September 2023",
@@ -72,6 +80,7 @@
         "waktu_dibaca": "11 Menit"
     },
     {
+        "id": "9",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -81,6 +90,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "10",
         "img": "link_gambar10.jpg",
         "name": "Ava Adams",
         "date": "30 September 2023",
@@ -90,6 +100,7 @@
         "waktu_dibaca": "9 Menit"
     },
     {
+        "id": "11",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -99,6 +110,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "12",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -108,6 +120,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "13",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -117,6 +130,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "14",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -126,6 +140,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "15",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -135,6 +150,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "16",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -144,6 +160,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "17",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -153,6 +170,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "18",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -162,6 +180,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "19",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -171,6 +190,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "20",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -180,6 +200,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "21",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -189,6 +210,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "22",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -198,6 +220,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "23",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -207,6 +230,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "24",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -216,6 +240,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "25",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -225,6 +250,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "26",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -234,6 +260,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "27",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -243,6 +270,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "28",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -252,6 +280,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "29",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -261,6 +290,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "30",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
@@ -270,6 +300,7 @@
         "waktu_dibaca": "16 Menit"
     },
     {
+        "id": "31",
         "img": "link_gambar9.jpg",
         "name": "James Taylor",
         "date": "25 September 2023",
