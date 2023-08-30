@@ -23,10 +23,12 @@ class ArticleController extends Controller
     public function index()
     {
         $data = Article::with('user', 'categories')
+            ->where('status', 'PUBLISH')
             ->orderBy('created_at', 'DESC')
             ->paginate(10); // Change 10 to the desired number of items per page
 
         $newArticle = Article::with('user', 'categories')
+            ->where('status', 'PUBLISH')
             ->orderBy('created_at', 'DESC')
             ->first();
 
