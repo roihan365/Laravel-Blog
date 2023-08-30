@@ -15,7 +15,7 @@
             </div>
         </div>
         @if (Route::has('login'))
-        <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+        <div class="sm:top-0 sm:right-0 p-6 text-right z-10">
                 @auth
                     <a href="{{ url('/admin') }}" class="bg-red-500 text-white px-9 py-2 rounded-md font-bold">Dashboard</a>
                 @else
