@@ -13,17 +13,47 @@
     }
   </style>
   <div class="container-fluid bg-white px-4">
-    <form method="POST" action="artikel.store">
+    @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+            @php
+                Session::forget('success');
+            @endphp
+        </div>
+    @endif
+    @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Ups!</strong> Sepertinya ada yang salah.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+    @endif
+    <form method="POST" action="{{ route('artikel.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label class="form-label mt-4">Judul Artikel</label>
-            <input type="text" class="form-control">
+            <input type="text" name="title" class="form-control">
         </div>
-        <div class="mb-5">
+        <div class="form-group">
+        <label for="exampleSelectBorder">Kategori</label>
+            <select name="kategori" class="custom-select form-control-border" id="exampleSelectBorder">
+                <option value="">Pilih kategori artikel</option>
+                @foreach ($categories as $data)
+                    <option value="{{ $data->id }}">{{ $data->name }}</option>
+                @endforeach
+            </select>
+        </div>  
+        <div class="mb-3">
             <label for="formFile" class="form-label">Upload Gambar</label>
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" type="file" name="image" id="formFile">
         </div>
-        <div id="editor"></div>
+        <div class="form-group">
+            <label> Description </label>
+            <textarea class="form-control" id="description" placeholder="Enter the Description" name="description"></textarea>
+        </div>
         <div>
           <button type="submit" class="btn btn-primary mt-4">Submit</button>
         </div>
@@ -34,7 +64,7 @@
   <script>
     // This sample still does not showcase all CKEditor&nbsp;5 features (!)
     // Visit https://ckeditor.com/docs/ckeditor5/latest/features/index.html to browse all the features.
-    CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
+    CKEDITOR.ClassicEditor.create(document.querySelector("#description"), {
         // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
         toolbar: {
             items: [

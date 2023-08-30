@@ -1,18 +1,3 @@
-<?php   
-$jsonData = File::get(resource_path('data/blog.json'));
-$data = json_decode($jsonData, true);
-
-// Tentukan jumlah data yang akan ditampilkan per halaman
-$itemsPerPage = 10;
-
-// Ambil halaman saat ini dari parameter URL (misalnya: http://example.com/?page=2)
-$currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-
-// Hitung indeks mulai dan berakhir untuk data yang akan ditampilkan pada halaman ini
-$startIndex = ($currentPage - 1) * $itemsPerPage;
-$endIndex = $startIndex + $itemsPerPage - 1;
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,45 +48,26 @@ $endIndex = $startIndex + $itemsPerPage - 1;
     </section>
 
     <div class="flex justify-between flex-wrap gap-1 px-32">
-    <?php for ($i = $startIndex; $i <= $endIndex && $i < count($data); $i++) : ?>
-        <div class="w-1/6 mb-10">
-            <img src="https://source.unsplash.com/WLUHO9A_xik" class="w-full h-40 rounded-lg mb-2" alt="">
-            <div class="flex items-center gap-2 mb-2">
-                <img src="https://source.unsplash.com/WLUHO9A_xik" alt="" class="w-7 h-7 rounded-full">
-                <p><?php echo $data[$i]['name']; ?></p>
-                <p class="text-xs text-gray-500"><?php echo $data[$i]['date']; ?></p>
+        @foreach ($data as $article)
+            <div class="w-1/6 mb-10">
+                <img src="{{ Storage::url($article->image) }}" class="w-full h-40 rounded-lg mb-2" alt="">
+                <div class="flex items-center gap-2 mb-2">
+                    <img src="{{ Storage::url($article->image) }}" alt="" class="w-7 h-7 rounded-full">
+                    <p>{{ $article->user->name }}</p>
+                    <p class="text-xs text-gray-500">{{ $article->created_at }}</p>
+                </div>
+                <h4 class="font-bold mb-2">{{ $article->title }}</h4>
+                <p class="text-sm mb-2">{{ Str::substr(strip_tags($article->content), 0, 100) . "..."}}</p>
+                <div class="flex">
+                    <p class="text-sm text-red-500 font-bold">{{ $article->categories->name }}</p>
+                </div>
             </div>
-            <h4 class="font-bold mb-2"><?php echo $data[$i]['title']; ?></h4>
-            <p class="text-sm mb-2"><?php echo $data[$i]['desc']; ?></p>
-            <div class="flex">
-                <p class="text-sm text-red-500 font-bold"><?php echo $data[$i]['category']; ?></p>
-            </div>
-        </div>
-    <?php endfor; ?>
+        @endforeach
     </div>
 
-    <div class="flex justify-center gap-2 mt-5 mb-32 px-32">
-    <?php if ($currentPage > 1) : ?>
-        <a href="?page=1" class=" text-gray-500 px-3 py-1 border-2 rounded-md">1</a>
-        <?php if ($currentPage > 2) : ?>
-            <span class="text-gray-500 mx-1">...</span>
-        <?php endif; ?>
-    <?php endif; ?>
-
-    <?php for ($page = max(1, $currentPage - 1); $page <= min($currentPage + 1, ceil(count($data) / $itemsPerPage)); $page++) : ?>
-        <?php if ($page != $currentPage) : ?>
-            <a href="?page=<?php echo $page; ?>" class="bg-white text-red-500 px-3 py-1 border-2 rounded-md"><?php echo $page; ?></a>
-        <?php else : ?>
-            <span class="bg-red-500 text-white px-3 py-1 rounded-md"><?php echo $page; ?></span>
-        <?php endif; ?>
-    <?php endfor; ?>
-
-    <?php if ($currentPage < ceil(count($data) / $itemsPerPage)) : ?>
-        <?php if ($currentPage < ceil(count($data) / $itemsPerPage) - 1) : ?>
-            <span class="text-gray-500 mx-1">...</span>
-        <?php endif; ?>
-        <a href="?page=<?php echo ceil(count($data) / $itemsPerPage); ?>" class="text-grey-500 px-3 py-1 border-2 rounded-md"><?php echo ceil(count($data) / $itemsPerPage); ?></a>
-    <?php endif; ?>
+    <!-- Add pagination links at the bottom -->
+    <div class="flex justify-center mt-5 mb-32 px-32">
+        {{ $data->links() }}
     </div>
 
 

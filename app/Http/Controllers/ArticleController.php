@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Categories;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Http\RedirectResponse;
 
 class ArticleController extends Controller
 {
@@ -12,19 +16,19 @@ class ArticleController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        Article::with('user')
+        $data = Article::with('user', 'categories')
             ->orderBy('created_at', 'DESC')
-            ->get();
+            ->paginate(10); // Change 10 to the desired number of items per page
+
+        return view('layouts.user', [
+            'data' => $data
+        ]);
     }
 
     /**
@@ -32,15 +36,54 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('admin.tambah-artikel');
+        $categories = Categories::all();
+        return view('admin.tambah-artikel', [
+            'categories' => $categories
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        //make code for store data here with validation
+        $validation = $request->validate(
+        [
+            'title' => 'required',
+            'description' => 'required',
+            'kategori' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        ], 
+        [
+           'title.required' => 'Judul harus diisi',
+            'description.required' => 'Konten harus diisi',
+            'kategori.required' => 'Kategori harus diisi',
+            'image.required' => 'Gambar harus diisi',
+            'image.image' => 'File harus berupa gambar',
+            'image.mimes' => 'File harus berupa gambar',
+            'image.max' => 'Ukuran file terlalu besar. Maksimal 2MB'
+        ]);
+
+        if ($validation) {
+            $data = $request->all();
+            $data['image'] = $request->file('image')->store(
+                'assets/gallery', 'public'
+            );
+
+            Article::create([
+                'title' => $data['title'],
+                'slug' => Str::slug($data['title']),
+                'content' => $data['description'],
+                'category_id' => $data['kategori'],
+                'image' => $data['image'],
+                'user_id' => auth()->user()->id,
+                'status' => 'PUBLISH'
+            ]); 
+            
+            return back()->with('success', 'Artikel berhasil di publish');
+        }
+
     }
 
     /**
@@ -70,8 +113,11 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(article $article)
+    public function destroy($id): RedirectResponse
     {
-        //
+        $item = Article::findOrFail($id);
+        $item ->delete();
+
+        return back()->with('success', 'Artikel berhasil di hapus');;
     }
 }
