@@ -78,7 +78,7 @@
                               <img src="{{ Storage::url($data->image) }}" alt="" class="img-fluid" width="50px" height="50px">
                             </td>
                             <td>
-                              <a href="" class="btn btn-warning"><i class="far fa-edit"></i></a>
+                              <a href="{{ route('artikel.edit', $data->id) }}" class="btn btn-warning"><i class="far fa-edit"></i></a>
                               <form action="{{ route('artikel.destroy', $data->id)}}" method="POST" class="d-inline">
                                   @csrf
                                   @method('delete')
@@ -86,7 +86,7 @@
                                       <i class="fa fa-trash"></i>
                                   </button>
                               </form>
-                              <a href="" class="btn btn-primary"><i class="far fa-eye"></i></a>
+                              <a href="{{ route('detailblog', $data->slug) }}" class="btn btn-primary"><i class="far fa-eye"></i></a>
                             </td>
                           </tr>  
                       @endforeach                 

@@ -26,8 +26,13 @@ class ArticleController extends Controller
             ->orderBy('created_at', 'DESC')
             ->paginate(10); // Change 10 to the desired number of items per page
 
+        $newArticle = Article::with('user', 'categories')
+            ->orderBy('created_at', 'DESC')
+            ->first();
+
         return view('users.home', [
-            'data' => $data
+            'data' => $data,
+            'newArticle' => $newArticle
         ]);
     }
 
@@ -103,17 +108,53 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(article $article)
+    public function edit($id)
     {
-        //
+        $categories = Categories::all();
+        $data = Article::with('categories')->findOrFail($id);
+        return view('admin.edit-artikel', [
+            'data' => $data,
+            'categories' => $categories
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, article $article)
+    public function update(Request $request, $id)
     {
-        //
+        $validation = $request->validate(
+            [
+                'title' => 'required',
+                'content' => 'required',
+                'kategori' => 'required',
+                'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+            ], 
+            [
+               'title.required' => 'Judul harus diisi',
+                'content.required' => 'Konten harus diisi',
+                'kategori.required' => 'Kategori harus diisi',
+                'image.image' => 'File harus berupa gambar',
+                'image.mimes' => 'File harus berupa gambar',
+                'image.max' => 'Ukuran file terlalu besar. Maksimal 2MB'
+            ]);
+
+        if ($validation) {
+            $data = $request->all();
+            $article = Article::findOrFail($id);
+
+            if ($request->hasFile('image')) {
+                $data['image'] = $request->file('image')->store(
+                    'assets/gallery', 'public'
+                );
+            } else {
+                unset($data['image']); // Remove the image field from data if not updated
+            }
+
+            $article->update($data);
+            
+            return back()->with('success', 'Artikel berhasil di update');
+        }
     }
 
     /**

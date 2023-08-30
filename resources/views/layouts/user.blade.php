@@ -53,7 +53,7 @@
         <div class="flex justify-between py-10 ">
             <div class="">
                 <p class="text-md font-bold text-white mb-2">Dapatkan Berita Terbaru</p>
-                <p class="text-white text-md"># Kunjingan webiste Robil News untuk mendapat berita terbaru pada bidang teknologi</p>
+                <p class="text-white text-md"># Kunjungi website Robil News untuk mendapat berita terbaru pada bidang teknologi</p>
             </div>
             <p class="text-white font-bold">&copy;Muhammad Bilal 2023</p>
         </div>
