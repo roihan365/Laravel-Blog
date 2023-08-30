@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class CategoriesController extends Controller
 {
@@ -20,15 +21,31 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tambah-kategori');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        $validation = $request->validate(
+            [
+                'name' => 'required|string|max:255',
+            ],
+            [
+                'name.required' => 'Nama kategori harus diisi',
+                'name.string' => 'Nama kategori harus berupa string',
+                'name.max' => 'Nama kategori maksimal 255 karakter',
+            ]
+        );
+
+        if ($validation) {
+            Categories::create([
+                'name' => $request->name,
+            ]);
+            return back()->with('success', 'Kategori berhasil di tambahkan');
+        }
     }
 
     /**

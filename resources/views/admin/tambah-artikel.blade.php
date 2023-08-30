@@ -55,7 +55,7 @@
             <textarea class="form-control" id="description" placeholder="Enter the Description" name="description"></textarea>
         </div>
         <div>
-          <button type="submit" class="btn btn-primary mt-4">Submit</button>
+          <button type="submit" class="btn btn-primary mt-4 mb-4">Submit</button>
         </div>
     </form>
   </div>

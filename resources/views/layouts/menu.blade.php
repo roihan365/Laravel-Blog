@@ -12,7 +12,7 @@
     </a>
 </li>
 <li class="nav-item">
-    <a href="{{ route('artikel.create') }}" class="nav-link {{ Request::is('admin/artikel/create') ? 'active' : '' }}">
+    <a href="{{ route('kategori.create') }}" class="nav-link {{ Request::is('admin/kategori/create') ? 'active' : '' }}">
         <i class="nav-icon fas fa-plus"></i>
         <p>Tambah Kategori</p>
     </a>

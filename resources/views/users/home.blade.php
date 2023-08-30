@@ -13,7 +13,9 @@
                 </div>
                 <p class="text-lg text-gray-500">{{ $newArticle->created_at }}</p>
             </div>
-            <h2 class="text-4xl font-bold">{{ $newArticle->title }}</h2>
+            <a href="{{ route('artikel.show', $newArticle->slug) }}">
+                <h2 class="text-4xl font-bold">{{ $newArticle->title }}</h2>
+            </a>
             <p class="text-lg">{{ Str::substr(strip_tags($newArticle->content), 0, 300) . "..."}}</p>
             <div class="flex items-center gap-3">
                 <p class="text-lg text-red-500 font-bold">{{ $newArticle->categories->name }}</p>

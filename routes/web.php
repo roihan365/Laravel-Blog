@@ -24,6 +24,7 @@ Route::get('/users/detailblog', function () {
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('admin/artikel', ArticleController::class);
+Route::resource('admin/kategori', App\Http\Controllers\CategoriesController::class);
 
 Auth::routes();
 

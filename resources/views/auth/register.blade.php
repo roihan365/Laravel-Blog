@@ -10,9 +10,22 @@
                 <div class="card-body register-card-body">
                     <p class="login-box-msg">Register a new membership</p>
 
-                    <form method="post" action="{{ route('register') }}">
+                    <form method="post" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
+                        <div class="input-group mb-3">
+                            <input type="file" name="image"
+                                class="form-control @error('image') is-invalid @enderror" value="{{ old('image') }}"
+                                placeholder="Upload Foto Profil">
+                            <div class="input-group-append">
+                                <div class="input-group-text"><span class="fas fa-image"></span></div>
+                            </div>
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                         <div class="input-group mb-3">
                             <input type="text" name="name"
                                 class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}"

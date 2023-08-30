@@ -30,6 +30,12 @@ class ArticleController extends Controller
             ->orderBy('created_at', 'DESC')
             ->first();
 
+            //set created_at to d-m-Y H:i
+            foreach ($data as $item) {
+                $item->created_at = date('d-m-Y H:i', strtotime($item->created_at));
+            }
+            $newArticle->created_at = date('d-m-Y H:i', strtotime($newArticle->created_at));
+
         return view('users.home', [
             'data' => $data,
             'newArticle' => $newArticle
