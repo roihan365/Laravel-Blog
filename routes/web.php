@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -14,17 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('users/home');
-});
+Route::get('/', [ArticleController::class, 'index'])->name('beranda');
+Route::get('artikel/{slug}', [ArticleController::class, 'show'])->name('detailblog');
+Route::get('/user', [ArticleController::class, 'index'])->name('user');
 Route::get('/users/detailblog', function () {
     return view('users.detailblog');
 });
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/admin/artikel', function() {
-    return view('admin.tambah-artikel');
-})->name('add-artikel');
+Route::resource('admin/artikel', ArticleController::class);
+Route::resource('admin/kategori', App\Http\Controllers\CategoriesController::class);
 
 Auth::routes();
 

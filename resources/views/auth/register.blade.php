@@ -8,11 +8,24 @@
 
             <div class="card">
                 <div class="card-body register-card-body">
-                    <p class="login-box-msg">Register a new membership</p>
+                    <p class="login-box-msg">Buat akun untuk mendapat akses</p>
 
-                    <form method="post" action="{{ route('register') }}">
+                    <form method="post" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
+                        <div class="input-group mb-3">
+                            <input type="file" name="image"
+                                class="form-control @error('image') is-invalid @enderror" value="{{ old('image') }}"
+                                placeholder="Upload Foto Profil">
+                            <div class="input-group-append">
+                                <div class="input-group-text"><span class="fas fa-image"></span></div>
+                            </div>
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                         <div class="input-group mb-3">
                             <input type="text" name="name"
                                 class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}"
@@ -63,12 +76,12 @@
 
                         <div class="row">
                             <div class="col-8">
-                                <div class="icheck-primary">
+                                {{-- <div class="icheck-primary">
                                     <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                                     <label for="agreeTerms">
                                         I agree to the <a href="#">terms</a>
                                     </label>
-                                </div>
+                                </div> --}}
                             </div>
                             <!-- /.col -->
                             <div class="col-4">
@@ -78,7 +91,7 @@
                         </div>
                     </form>
 
-                    <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
+                    <a href="{{ route('login') }}" class="text-center">Login</a>
                 </div>
                 <!-- /.form-box -->
             </div><!-- /.card -->
