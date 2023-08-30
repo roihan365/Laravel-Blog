@@ -8,7 +8,7 @@
 
             <div class="card">
                 <div class="card-body register-card-body">
-                    <p class="login-box-msg">Register a new membership</p>
+                    <p class="login-box-msg">Buat akun untuk mendapat akses</p>
 
                     <form method="post" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
@@ -76,12 +76,12 @@
 
                         <div class="row">
                             <div class="col-8">
-                                <div class="icheck-primary">
+                                {{-- <div class="icheck-primary">
                                     <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                                     <label for="agreeTerms">
                                         I agree to the <a href="#">terms</a>
                                     </label>
-                                </div>
+                                </div> --}}
                             </div>
                             <!-- /.col -->
                             <div class="col-4">
@@ -91,7 +91,7 @@
                         </div>
                     </form>
 
-                    <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
+                    <a href="{{ route('login') }}" class="text-center">Login</a>
                 </div>
                 <!-- /.form-box -->
             </div><!-- /.card -->
