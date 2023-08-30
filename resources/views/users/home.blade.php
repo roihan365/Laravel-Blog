@@ -39,7 +39,7 @@
                     <p>{{ $article->user->name }}</p>
                     <p class="text-xs text-gray-500">{{ $article->created_at }}</p>
                 </div>
-                <h4 class="font-bold mb-2">{{ $article->title }}</h4>
+                <h4 class="font-bold mb-2">{{ Str::substr($article->title, 0, 50) }}</h4>
                 <p class="text-sm mb-2">{{ Str::substr(strip_tags($article->content), 0, 100) . "..."}}</p>
                 <div class="flex">
                     <p class="text-sm text-red-500 font-bold">{{ $article->categories->name }}</p>
