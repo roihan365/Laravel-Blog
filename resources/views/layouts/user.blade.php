@@ -2,21 +2,31 @@
 <html>
 <head>
     <title>@yield('title')</title>
-    @vite('resources/css/app.css')
+    @vite('resources/css/app.css')  
 </head>
 <body>
     <nav class="flex justify-between items-center  py-2 my-8 px-32">
         <div class="flex">
             <h3 class="text-3xl text-red-500 font-bold">Robil News |</h3>
             <div class="flex gap-10 pl-10 items-center">
-                <a href="">Home</a>
+                <a href="{{ route('beranda') }}">Home</a>
                 <a href="">About</a>
                 <a href="">subscribe</a>
             </div>
         </div>
-        <a href="{{ route('login') }}">
-            <button class="bg-red-500 text-white px-9 py-2 rounded-md font-bold">Masuk</button>
-        </a>
+        @if (Route::has('login'))
+        <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                @auth
+                    <a href="{{ url('/admin') }}" class="bg-red-500 text-white px-9 py-2 rounded-md font-bold">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="bg-red-500 text-white px-9 py-2 rounded-md font-bold">Masuk</a>
+
+                    {{-- @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                    @endif --}}
+                @endauth
+            </div>
+        @endif
     </nav>
 
     @yield('container-user')

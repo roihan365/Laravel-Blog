@@ -1,4 +1,5 @@
 @extends('layouts.user')
+@section('title', 'RoBil News')
 
 @section('container-user')
 
@@ -28,17 +29,19 @@
 <div class="flex justify-between flex-wrap gap-1 px-32">
     @foreach ($data as $article)
         <div class="w-1/6 mb-10">
-            <img src="{{ Storage::url($article->image) }}" class="w-full h-40 rounded-lg mb-2" alt="">
-            <div class="flex items-center gap-2 mb-2">
-                <img src="{{ Storage::url($article->image) }}" alt="" class="w-7 h-7 rounded-full">
-                <p>{{ $article->user->name }}</p>
-                <p class="text-xs text-gray-500">{{ $article->created_at }}</p>
-            </div>
-            <h4 class="font-bold mb-2">{{ $article->title }}</h4>
-            <p class="text-sm mb-2">{{ Str::substr(strip_tags($article->content), 0, 100) . "..."}}</p>
-            <div class="flex">
-                <p class="text-sm text-red-500 font-bold">{{ $article->categories->name }}</p>
-            </div>
+            <a href="{{ route('detailblog', $article->slug) }}">
+                <img src="{{ Storage::url($article->image) }}" class="w-full h-40 rounded-lg mb-2" alt="">
+                <div class="flex items-center gap-2 mb-2">
+                    <img src="{{ Storage::url($article->image) }}" alt="" class="w-7 h-7 rounded-full">
+                    <p>{{ $article->user->name }}</p>
+                    <p class="text-xs text-gray-500">{{ $article->created_at }}</p>
+                </div>
+                <h4 class="font-bold mb-2">{{ $article->title }}</h4>
+                <p class="text-sm mb-2">{{ Str::substr(strip_tags($article->content), 0, 100) . "..."}}</p>
+                <div class="flex">
+                    <p class="text-sm text-red-500 font-bold">{{ $article->categories->name }}</p>
+                </div>
+            </a>
         </div>
     @endforeach
 </div>

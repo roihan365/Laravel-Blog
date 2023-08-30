@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ArticleController::class, 'index']);
+Route::get('/', [ArticleController::class, 'index'])->name('beranda');
+Route::get('artikel/{slug}', [ArticleController::class, 'show'])->name('detailblog');
 Route::get('/user', [ArticleController::class, 'index'])->name('user');
 Route::get('/users/detailblog', function () {
     return view('users.detailblog');

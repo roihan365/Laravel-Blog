@@ -89,9 +89,15 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(article $article)
+    public function show($slug)
     {
-        //
+        $data = Article::with('user', 'categories')
+            ->where('slug', $slug)
+            ->firstOrFail();
+
+        return view('users.detailblog', [
+            'data' => $data
+        ]);
     }
 
     /**
