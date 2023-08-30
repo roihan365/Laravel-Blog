@@ -26,7 +26,7 @@ class ArticleController extends Controller
             ->orderBy('created_at', 'DESC')
             ->paginate(10); // Change 10 to the desired number of items per page
 
-        return view('layouts.user', [
+        return view('users.home', [
             'data' => $data
         ]);
     }
@@ -121,3 +121,5 @@ class ArticleController extends Controller
         return back()->with('success', 'Artikel berhasil di hapus');;
     }
 }
+
+
